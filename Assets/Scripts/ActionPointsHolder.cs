@@ -18,6 +18,8 @@ public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDra
     
     private CanvasGroup canvasGroup;
     
+    public static bool IS_DRAGGING = false;
+    
 
     
     
@@ -49,6 +51,7 @@ public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDra
     {
         if(actionPoints <= 0)
             return;
+        IS_DRAGGING = true;
         Debug.Log("Begin Drag");
         canvasGroup.blocksRaycasts = false;
     }
@@ -58,6 +61,7 @@ public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDra
         Debug.Log("End Drag");
         actionValueTextHolder.anchoredPosition = new Vector3(0,0,0);
         canvasGroup.blocksRaycasts = true;
+        IS_DRAGGING = false;
     }
     
     public void OnDrag(PointerEventData eventData)
