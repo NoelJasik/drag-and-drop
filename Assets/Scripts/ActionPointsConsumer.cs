@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -32,7 +31,7 @@ public class ActionPointsConsumer : MonoBehaviour, IDropHandler
 
     public void Update()
     {
-        if(requiredActionPoints <= 0)
+        if(isCompleted)
             return;
         if (ActionPointsHolder.IS_DRAGGING)
         {
@@ -59,7 +58,7 @@ public class ActionPointsConsumer : MonoBehaviour, IDropHandler
     
     public void OnDrop(PointerEventData eventData)
     {
-        if(requiredActionPoints <= 0)
+        if(isCompleted)
             return;
         Debug.Log("Dropped");
         if (eventData.pointerDrag != null)

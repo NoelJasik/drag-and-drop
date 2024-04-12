@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class ActionPointsHolder : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     public int actionPoints = 5;
     [SerializeField]
@@ -19,11 +19,6 @@ public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDra
     private CanvasGroup canvasGroup;
     
     public static bool IS_DRAGGING = false;
-    
-
-    
-    
-    
     
     private void Awake()
     {
@@ -40,11 +35,6 @@ public class ActionPointsHolder : MonoBehaviour, IPointerClickHandler, IBeginDra
     {
         actionPoints = 0;
         actionValueText.text = actionPoints.ToString();
-    }
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        actionPoints++;
-        Debug.Log("Action Points: " + actionPoints);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
