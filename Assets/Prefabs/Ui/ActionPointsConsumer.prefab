@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7871284474246603355}
   - component: {fileID: 6926202241392838365}
   - component: {fileID: 9102376382224154748}
+  - component: {fileID: 6359458496664712225}
   m_Layer: 5
   m_Name: ActionPointsConsumer
   m_TagString: Untagged
@@ -92,11 +93,34 @@ MonoBehaviour:
   actionValueText: {fileID: 2970732827255846547}
   requiredActionPoints: 10
   isCompleted: 0
+  isHovered: 0
   unselectedSprite: {fileID: 21300000, guid: 52a79c29274d01bfd953acf91ed4970b, type: 3}
   selectedSprite: {fileID: 21300000, guid: 6a632b7b6871afaba995b1a95adad68f, type: 3}
   completedSprite: {fileID: 21300000, guid: 6a632b7b6871afaba995b1a95adad68f, type: 3}
+  hoverSprite: {fileID: 21300000, guid: 65fcb5bd61e4188aea060bdafb5719ec, type: 3}
   checkMark: {fileID: 6765159319495968322}
   additionEffect: {fileID: 2372256490210297361, guid: 370ca3c245eeac0ff8f61087e7103fd2, type: 3}
+--- !u!95 &6359458496664712225
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769366024961090670}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cf3014dd487075d8f8f24a1e20d36d60, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5506209325560074635
 GameObject:
   m_ObjectHideFlags: 0
